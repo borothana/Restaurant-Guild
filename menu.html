@@ -4,12 +4,13 @@
 <head>
     <meta charset="utf-8" />
     <title>Menu</title>
+    <link href="stylesheet/restaurantStyles.css" rel="stylesheet" type="text/css" />
     <style>
         .Content {
             width: 70%;
-            height: 100%;
             text-align: center;
             margin: auto;
+            
         }
 
         ul {
@@ -27,25 +28,26 @@
         table{
             border-collapse:collapse;
         }
-            table td {
-                border: none;
-                border-width: thin;
-            }
-
-        #divFooter {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        table td {
+            border-color:white;
+            border-style:solid;
+            border-width:25px;
+            background-color:silver;
+           
         }
 
         #divBody {
             margin: auto;
             text-align: center;
+            background-color: gainsboro;
+            padding:25px;
         }
     </style>
 </head>
 <body>
     <div class="Content">
         <div id="divHeader">
-            <h2>100 Homes Restaurant</h2>
+            <h2 id="restName">100 Homes Restaurant</h2>
             <hr />
             <ul>
                 <li><a href="home.html" target="_self">Home</a></li>
@@ -56,7 +58,7 @@
             <hr />
         </div>
         <div id="divBody">
-            <table style="width:100%">
+            <table style="width:90%; position:center; margin:auto;">
                 <tr>
                     <td>
                         <h3>Burger and Fried</h3>
