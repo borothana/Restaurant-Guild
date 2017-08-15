@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <title>Home</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <link href="stylesheet/restaurantStyles.css" rel="stylesheet" type="text/css" />
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -20,29 +22,71 @@
         }
 
         body {
-            height:75%;
+            height: 75%;
         }
 
-        .Content{
-            width:70%;
-            height:100%;
-            text-align:center;
-            margin:auto;
+        .Content {
+            width: 70%;
+            height: 100%;
+            text-align: center;
+            margin: auto;
         }
 
         #divBody {
             margin: auto;
             text-align: center;
             background-color: #F7F7F5;
-            padding:25px;
+            padding: 25px;
+        }
+
+        .carousel-content {
+            color: black;
+            display: table;
+            margin: auto;
+        }
+
+        #myNews {
+            width: 100%;
+            height: auto;
+            padding-bottom:35px;
         }
     </style>
+    <noscript>Please enable Javascript for full functionality.</noscript>
 </head>
 <body>
-    <div class="jumbotron"  style="margin:auto; text-align:center">
+    <div class="jumbotron" style="margin:auto; text-align:center;">
         <h1 id="restName">100 Homes Restaurant</h1>
-        <p>BIG NEWS - Opening a new location!</p>
+
+        <div class="Container">
+            <div id="myNews" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myNews" data-slide-to="0" class="active"></li>
+                    <li data-target="#myNews" data-slide-to="1"></li>
+                    <li data-target="#myNews" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="carousel-content">
+                            <p> We're opening a new location!</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-content">
+                            <p>We're rolling out our seasonal menu, with special options for this season.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-content">
+                            <p>The Drink of the Month is SG Special Brew.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
+
+
     <div class="Content">
         <div id="divHeader" class="row">
             <div class="col-sm-12">
@@ -72,7 +116,7 @@
         <div id="divFooter">
             <br />
             <hr />
-            <p>1408 Thistle Lane, Shakopee, MN 55379</p>            
+            <p>1408 Thistle Lane, Shakopee, MN 55379</p>
             <p>952-666-9999</p>
         </div>
     </div>
