@@ -5,3 +5,15 @@
 #restName {
     font-family: 'Comic Sans MS';
 }
+
+a{
+    text-decoration:none;
+    color:black;
+}
+a:visited{
+    color:silver;
+    font-family:monospace;
+}
+a:hover{
+    font-weight:bold;
+}

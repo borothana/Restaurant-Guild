@@ -2,9 +2,18 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-     
+
     <title>Contact Us</title>
     <link href="stylesheet/restaurantStyles.css" rel="stylesheet" type="text/css" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
     <style>
         .Content {
             width: 70%;
@@ -13,106 +22,126 @@
             margin: auto;
         }
 
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        li {
-            display: block;
-            width: 75px;
-            float: left;
-        }
         table td {
             border: none;
             text-align: left;
         }
-        .tdleft{
-            text-align:right;
-            padding-right:25px;
+
+        .tdleft {
+            text-align: right;
+            padding-right: 25px;
         }
 
         #divBody {
             margin: auto;
             text-align: center;
+            background-color: #F7F7F5;
+            padding:25px;
         }
     </style>
 </head>
 <body>
+    <div class="jumbotron" style="margin:auto; text-align:center">
+        <h1 id="restName">100 Homes Restaurant</h1>
+        <p>BIG NEWS - Opening a new location!</p>
+    </div>
+
     <div class="Content">
-        <div id="divHeader">            
-                <h2 id="restName"> 100 Homes Restaurant</h2>
-            <hr />
-            <ul>
-                <li><a href="home.html" target="_self">Home</a></li>
-                <li><a href="menu.html" target="_self">Menu</a></li>
-                <li><a href="contactus.html" target="_self">Contact Us</a></li>
-            </ul>
-            <br />
-            <hr />
+        <div class="row">
+            <div id="divHeader" class="col-sm-12">
+                <hr />
+                <ul class="nav nav-pills">
+                    <li><a href="home.html" target="_self"><span class="glyphicon glyphicon-home"></span></a></li>
+                    <li><a href="menu.html" target="_self">Menu</a></li>
+                    <li class="active"><a href="contactus.html" target="_self">Contact Us</a></li>
+                </ul>
+                <hr />
+            </div>
         </div>
-        <div id="divBody">
-            <table style="width:50%">
-                <tr>
-                    <td class="tdleft"><b>Name:</b></td>
-                    <td><input type="text" name="txtName" style="width:100%" /></td>
-                </tr>
-                <tr>
-                    <td class="tdleft">Email:</td>
-                    <td><input type="text" name="txtEmail" style="width:100%" /></td>
-                </tr>
-                <tr>
-                    <td class="tdleft"><b>Phone:</b></td>
-                    <td><input type="text" name="txtPhone" style="width:100%" /></td>
-                </tr>
-                <tr>
-                    <td class="tdleft">Reason for Inquiry:</td>
-                    <td>    
-                        <select id="optReason" style="width:100%">
-                            <option value="Catering">Catering</option>
-                            <option value="PParty">Private Party</option>
-                            <option value="Feedback">Feedback</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tdleft">Additional Information:</td>
-                    <td><textarea id="txtInfo" style="width:100%"></textarea></td>
-                </tr>
-                <tr>
-                    <td class="tdleft">Have you been to the restaurant?</td>
-                    <td>
-                        <input type="radio" id="radUsedToCome" value="No" checked />No &nbsp; &nbsp; &nbsp;
-                        <input type="radio" id="radUsedToCome" value="Yes" />Yes
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tdleft"><b>Best day to contact you:</b></td>
-                    <td>
-                        <input type="checkbox" id="chkM" />M &nbsp;
-                        <input type="checkbox" id="chkT" />T &nbsp;
-                        <input type="checkbox" id="chkW" />W &nbsp;
-                        <input type="checkbox" id="chkTH" />TH &nbsp;
-                        <input type="checkbox" id="chkF" />F &nbsp;
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tdleft"></td>
-                    <td style="text-align:right"><input type="submit" id="btnSubmit" value="Send Request" /></td>
-                </tr>
-                
-            </table>
+        <div id="divBody" class="row">
+            <div class="row" style="margin-bottom:5px">
+                <div class="col-sm-3" style="text-align:right">
+                    <b>Name:</b>
+                </div>
+                <div class="col-sm-3" style="text-align:left">
+                    <input type="text" name="txtName" style="width:100%" />
+                </div>
+            </div>
+            <div class="row" style="margin-bottom:5px">
+                <div class="col-sm-3" style="text-align:right">
+                    Email:
+                </div>
+                <div class="col-sm-3" style="text-align:left">
+                    <input type="text" name="txtEmail" style="width:100%" />
+                </div>
+            </div>
+            <div class="row" style="margin-bottom:5px">
+                <div class="col-sm-3" style="text-align:right">
+                    <b>Phone:</b>
+                </div>
+                <div class="col-sm-3" style="text-align:left">
+                    <input type="text" name="txtPhone" style="width:100%" />
+                </div>
+            </div>
+            <div class="row" style="margin-bottom:5px">
+                <div class="col-sm-3" style="text-align:right">
+                    Reason for Inquiry:
+                </div>
+                <div class="col-sm-3" style="text-align:left">
+                    <select id="optReason" style="width:100%">
+                        <option value="Catering">Catering</option>
+                        <option value="PParty">Private Party</option>
+                        <option value="Feedback">Feedback</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row" style="margin-bottom:5px">
+                <div class="col-sm-3" style="text-align:right">
+                    Additional Information:
+                </div>
+                <div class="col-sm-3" style="text-align:left">
+                    <textarea id="txtInfo" style="width:100%"></textarea>
+                </div>
+            </div>
+            <div class="row" style="margin-bottom:5px">
+                <div class="col-sm-3" style="text-align:right">
+                    Have you been to the restaurant?
+                </div>
+                <div class="col-sm-3" style="text-align:left">
+                    <input type="radio" id="radUsedToCome" value="No" checked />No &nbsp; &nbsp; &nbsp;
+                    <input type="radio" id="radUsedToCome" value="Yes" />Yes
+                </div>
+            </div>
+            <div class="row" style="margin-bottom:5px">
+                <div class="col-sm-3" style="text-align:right">
+                    <b>Best day to contact you:</b>
+                </div>
+                <div class="col-sm-3" style="text-align:left">
+                    <input type="checkbox" id="chkM" />M &nbsp;
+                    <input type="checkbox" id="chkT" />T &nbsp;
+                    <input type="checkbox" id="chkW" />W &nbsp;
+                    <input type="checkbox" id="chkTH" />TH &nbsp;
+                    <input type="checkbox" id="chkF" />F &nbsp;
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3" style="text-align:right">
+
+                </div>
+                <div class="col-sm-3" style="text-align:right">
+                    <input type="submit" id="btnSubmit" value="Send Request" />                   
+                </div>               
+            </div>
 
         </div>
-        <div id="divFooter">
-            <br />
-            <hr />
-            <p>1408 Thistle Lane, Shakopee, MN 55379</p>
-            <p>952-666-9999</p>
-        </div>
-    </div>
+                <div id="divFooter">
+                    <br />
+                    <hr />
+                    <p>1408 Thistle Lane, Shakopee, MN 55379</p>
+                    <p>952-666-9999</p>
+                </div>
+            </div>
 
 </body>
 </html>
